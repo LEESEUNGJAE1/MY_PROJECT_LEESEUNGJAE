@@ -14,6 +14,7 @@ void main(){
 	bool is_number ;
 	int reverse = 0 ;
 	int sort = 0 ;
+	char* binary ;
 
 	while(fgets(input, sizeof(input), stdin) != NULL){
 
@@ -40,7 +41,8 @@ void main(){
 			//Compute and print the length
 			reverse = reverse_digits(atoi(input)) ;
 			sort = sort_digits(atoi(input)) ;
-			printf("reverse> %d\nsort> %d\n", reverse, sort) ;
+			binary = binarized(atoi(input)) ;
+			printf("reverse> %d\nsort> %d\nbinary> %s\n", reverse, sort,binary) ;
 		}
 	}
 

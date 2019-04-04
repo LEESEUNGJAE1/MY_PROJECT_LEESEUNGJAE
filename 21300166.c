@@ -33,7 +33,30 @@ int sort_digits(int n) {
 	for(int i = 0; i < nDigits; i++){
 		result = 10*result + number[i] ;
 	}
+	free(number) ;
 	return result;
 }
 
+char* binarized(int n){
+	int digit = 0 ;
+	int temp = 0 ;
+	char* binaryNumber ;
+	
+	temp = n ;
+	while(temp > 0){
+		temp /= 2 ;
+		digit++ ;
+	}
 
+	binaryNumber = (char*)malloc(sizeof(char)*digit) ;
+
+	//push characters base by base
+	while(digit > 0){
+		temp = n%2 ;
+		n = n/2 ;
+		binaryNumber[digit-1] = (char)(temp + (int)'0') ;
+		digit-- ;
+	}
+
+	return binaryNumber ;
+}
