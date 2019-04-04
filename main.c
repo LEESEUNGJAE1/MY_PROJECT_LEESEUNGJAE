@@ -2,11 +2,9 @@
 #include <stdlib.h>
 #include <string.h>
 #include <ctype.h>
+#include <stdbool.h>
 #include "21300166.h"
 #include "21100506.h"
-typedef int bool ;
-#define true 1
-#define false 0
 
 void main(){
 
@@ -42,7 +40,9 @@ void main(){
 			reverse = reverse_digits(atoi(input)) ;
 			sort = sort_digits(atoi(input)) ;
 			binary = binarized(atoi(input)) ;
-			printf("reverse> %d\nsort> %d\nbinary> %s\n", reverse, sort,binary) ;
+			printf("reverse> %d\nsort> %d\nbinary> %s\nisPrime> ", reverse, sort,binary) ;
+			//printf(isPrime(n) ? "True\n" : "False\n") ;
+			printf("\n") ;
 		}
 	}
 
